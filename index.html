@@ -22,6 +22,10 @@
       padding: 0;
       box-sizing: border-box;
     }
+    :root {
+  --app-height: 100vh;
+}
+
     html, body {
       height: 100%;
       background-color: black;
@@ -32,7 +36,7 @@
     .main-container {
       display: flex;
       flex-direction: column;
-      height: 100vh;
+      height: var(--app-height);
       padding: 16px;
       gap: 16px;
     }
@@ -193,7 +197,15 @@
   <script>
     // Aktiviert :active bei Touch – iOS & Android
     document.addEventListener("touchstart", function(){}, true);
+    function setAppHeight() {
+    document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+  }
+
+  window.addEventListener('resize', setAppHeight);
+  window.addEventListener('orientationchange', setAppHeight);
+  setAppHeight(); // initial setzen
   </script>
 </body>
 </html>
+
 
