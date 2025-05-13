@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-startup-image" href="./images/tut-icon_l.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" />
+<link rel="apple-touch-startup-image" href="./images/tut-icon_l.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" />
+<link rel="apple-touch-startup-image" href="./images/tut-icon_l.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" />
+<!-- Add more as needed -->
+
+  <title>Tills Ultimatives Trinkspiel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-top: env(safe-area-inset-top);
+    }
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      padding: 16px;
+      gap: 16px;
+    }
+    .kachel {
+      background-color: #22222200;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .erste-kachel {
+      height: calc(20% - 16px);
+    }
+
+    .zweite-kachel, .dritte-kachel{
+        height: calc(40% - 16px);
+    }
+
+    .zweite-kachel, .minispiel-item img{
+        border: 2.5px solid rgba(255, 255, 255, 0.35);
+    }
+
+/* Sanfte Übergangseffekte für die Kacheln und Bilder */
+.zweite-kachel, .erste-kachel, .minispiel-item img {
+    transition: transform 0.2s ease;
+}
+
+/* Effekt für Bilder beim Klicken */
+.minispiel-item img:active, .zweite-kachel:active, .erste-kachel:active {
+    transform: scale(0.98); /* Verkleinert das Bild um 10% beim Klicken */
+}
+
+    .vorschlag-img {
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .zweite-kachel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .vorschlag-text {
+      font-size: 16px;
+      font-weight: bold;
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+    .titel-text {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      transform: translateY(8px);
+    }
+    .minispiele-titel {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+      transform: translateY(8px);
+    }
+    .minispiele-scroll {
+      margin-top: 8px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 16px;
+      overflow-x: auto;
+      height: 100%;
+    }
+
+    .minispiel-item {
+  flex: 0 0 auto;
+  height: 100%;
+  aspect-ratio: 1 / 1.2; /* Aspect ratio */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5%; /* Rounded corners on the container */
+  overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.minispiel-item img {
+  width: 100%;
+  height: 80%; /* Image takes 80% of the height */
+  object-fit: cover; /* Image fits the container without distortion */
+  display: block; /* Ensures no gaps or inline behavior */
+  border-radius: 5%; /* Rounded corners on the image */
+  overflow: hidden; /* Ensures image is clipped properly */
+}
+
+.minispiel-name {
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  height: 20%; /* Remaining space for the name */
+  line-height: 1.2;
+  padding-top: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+  word-break: break-word;
+  box-sizing: border-box; /* Ensures padding doesn't affect height */
+}
+/* Scrollbar unsichtbar machen, aber das Scrollen ermöglichen */
+.minispiele-scroll::-webkit-scrollbar {
+    display: none; /* Versteckt die Scrollleiste */
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="main-container">
+
+    <!-- Vorschau Kachel -->
+    <div class="kachel erste-kachel">
+      <img class="vorschlag-img" src="./images/tut-bombe.png" alt="Vorschlag">
+      <div class="vorschlag-text">Vorschlag</div>
+    </div>
+
+    <!-- Haupttitel -->
+    <div class="titel-text">Tills Ultimatives Trinkspiel</div>
+
+    <!-- Logo Kachel -->
+    <div class="kachel zweite-kachel">
+      <img src="./images/tut-icon_l.png" alt="Tills Ultimatives Trinkspiel">
+    </div>
+
+    <!-- Minispiele Titel -->
+    <div class="minispiele-titel">Minispiele</div>
+
+    <!-- Minispiele Scroll-Kachel -->
+    <div class="kachel dritte-kachel">
+      <div class="minispiele-scroll">
+        <div class="minispiel-item">
+          <img src="./images/tut-bombe.png" alt="Minispiel 1">
+          <div class="minispiel-name">Bombe</div>
+        </div>
+        <div class="minispiel-item">
+          <img src="./images/tut-milli.png" alt="Minispiel 2">
+          <div class="minispiel-name">Milli</div>
+        </div>
+        <div class="minispiel-item">
+          <img src="./images/tut-bombe.png" alt="Minispiel 3">
+          <div class="minispiel-name">Rakete</div>
+        </div>
+        <!-- weitere Minispiele -->
+      </div>
+    </div>
+
+  </div>
+  <script>
+    // Aktiviert :active bei Touch – iOS & Android
+    document.addEventListener("touchstart", function(){}, true);
+  </script>
+</body>
+</html>
+
