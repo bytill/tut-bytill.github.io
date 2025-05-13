@@ -26,24 +26,25 @@
   --app-height: 100vh;
 }
 
-    html, body {
-      height: 100%;
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-    }
-    .main-container {
-      display: flex;
-      flex-direction: column;
-      height: var(--app-height);
-      padding: 
-          calc(16px + env(safe-area-inset-top, 0px))
-         calc(16px + env(safe-area-inset-right, 0px))
-         calc(16px + env(safe-area-inset-bottom, 0px))
-         calc(16px + env(safe-area-inset-left, 0px));
-      gap: 16px;
-    }
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  overscroll-behavior: contain;
+}
+
+.main-container {
+  height: var(--app-height);
+  padding:
+    calc(16px + env(safe-area-inset-top))
+    calc(16px + env(safe-area-inset-right))
+    calc(16px + env(safe-area-inset-bottom))
+    calc(16px + env(safe-area-inset-left));
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
     .kachel {
       background-color: #22222200;
       border-radius: 12px;
@@ -201,13 +202,14 @@
   <script>
     // Aktiviert :active bei Touch – iOS & Android
     document.addEventListener("touchstart", function(){}, true);
-    function setAppHeight() {
-    document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+  function setAppHeight() {
+    const vh = window.visualViewport?.height || window.innerHeight;
+    document.documentElement.style.setProperty('--app-height', `${vh}px`);
   }
 
   window.addEventListener('resize', setAppHeight);
   window.addEventListener('orientationchange', setAppHeight);
-  setAppHeight(); // initial setzen
+  setAppHeight();
   </script>
 </body>
 </html>
