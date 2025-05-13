@@ -203,14 +203,43 @@ html, body {
   <script>
     // Aktiviert :active bei Touch – iOS & Android
     document.addEventListener("touchstart", function(){}, true);
-  function setAppHeight() {
-    const vh = window.visualViewport?.height || window.innerHeight;
-    document.documentElement.style.setProperty('--app-height', `${vh}px`);
-  }
+// Höhe richtig setzen (mehrfach)
+function setAppHeight() {
+  const vh = (
+    window.visualViewport?.height ||
+    document.documentElement.clientHeight ||
+    window.innerHeight
+  );
+  document.documentElement.style.setProperty('--app-height', `${vh}px`);
+}
 
-  window.addEventListener('resize', setAppHeight);
-  window.addEventListener('orientationchange', setAppHeight);
+function updateHeightWithDelays() {
   setAppHeight();
+  setTimeout(setAppHeight, 100);
+  setTimeout(setAppHeight, 300);
+  setTimeout(setAppHeight, 1000);
+}
+
+// App bei jedem Start einmalig neu laden
+function reloadOnceOnStart() {
+  if (!sessionStorage.getItem('reloaded')) {
+    sessionStorage.setItem('reloaded', 'true');
+    location.reload(); // Harter Reload, löst alle Höhen- und Cache-Probleme
+  }
+}
+
+window.addEventListener('resize', updateHeightWithDelays);
+window.addEventListener('orientationchange', updateHeightWithDelays);
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    updateHeightWithDelays();
+  }
+});
+
+window.addEventListener('load', () => {
+  reloadOnceOnStart();      // ← einmal reload
+  updateHeightWithDelays(); // ← Höhe setzen
+});
   </script>
 </body>
 </html>
