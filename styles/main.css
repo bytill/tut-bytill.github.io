@@ -6,9 +6,9 @@ box-sizing: border-box;
 
 :root {
 --app-height: 100vh;
---spacing-small: 10px;
---spacing-medium: 20px;
---spacing-large: 40px;
+--spacing-small: 12px;
+--spacing-medium: 24px;
+--spacing-large: 48px;
 }
 
 html, body {
@@ -86,9 +86,11 @@ font-weight: normal;
 position: absolute;
 top: var(--spacing-medium);
 left: var(--spacing-medium);
+opacity: 0.75;
 }
 
 .vorschlag-description {
+opacity: 0.75;
 font-size: 14px;
 font-weight: lighter;
 position: absolute;
