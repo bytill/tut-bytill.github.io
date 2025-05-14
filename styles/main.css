@@ -76,13 +76,14 @@ object-fit: cover;
 .vorschlag-text {
 font-size: 16px;
 font-weight: bold;
-position: absolut;
-top: 8px;
-left: 16px;
+position: absolute;
+top: 5px;
+left: 20px;
 }
 
 .titel-text {
 font-size: 20px;
+margin-left: 15px;
 font-weight: bold;
 text-align: left;
 transform: translateY(8px);
@@ -90,6 +91,7 @@ transform: translateY(8px);
 
 .minispiele-titel {
 font-size: 16px;
+margin-left: 15px
 font-weight: light;
 text-align: left;
 transform: translateY(8px);
