@@ -62,7 +62,7 @@ transform: scale(0.98); /* Verkleinert das Bild um 10% beim Klicken */
 
 .vorschlag-img {
 opacity: 0.5;
-width: calc(100% - 20px);
+width: calc(100% - 30px);
 height: 100%;
 object-fit: cover;
 }
