@@ -94,7 +94,7 @@ opacity: 0.75;
 
 .vorschlag-description {
 opacity: 0.75;
-font-size: 14px;
+font-size: var(--font-size-small);
 font-weight: normal;
 position: absolute;
 top: calc(var(--spacing-small) + var(--font-size-medium) + var(--spacing-small));
