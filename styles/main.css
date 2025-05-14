@@ -50,7 +50,7 @@ height: calc(40% - 8px);
 border: 2.5px solid rgba(255, 255, 255, 0.35);
 }
 
-.vorschlag-img, .zweite-kachel, .erste-kachel, .minispiel-item img {
+.vorschlag-img, .zweite-kachel img, .minispiel-item img {
 transition: transform 0.2s ease;
 border-radius: 5%; /* Rounded corners on the image */
 }
