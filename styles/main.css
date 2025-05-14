@@ -87,7 +87,7 @@ object-fit: cover;
 font-size: var(--font-size-medium);
 font-weight: normal;
 position: absolute;
-top: var(--spacing-small);
+top: calc(var(--spacing-small) / 2);
 left: var(--spacing-medium);
 opacity: 0.75;
 }
@@ -97,12 +97,12 @@ opacity: 0.75;
 font-size: var(--font-size-small);
 font-weight: normal;
 position: absolute;
-top: calc(var(--spacing-small) + var(--font-size-medium) + var(--spacing-small));
+top: calc(var(--spacing-small) + var(--font-size-medium));
 left: var(--spacing-medium);
 width: calc(100% - var(--spacing-large)); /* links + rechts 16px Abstand */
 line-height: 1.5;
 word-wrap: break-word;
-max-height: calc(100% - var(--spacing-small) + var(--font-size-medium) + var(--spacing-small) - var(--spacing-small)); /* Platz nach oben + unten abziehen */
+max-height: calc(100% - var(--spacing-small) + var(--font-size-medium) - var(--spacing-small)); /* Platz nach oben + unten abziehen */
 overflow: hidden;
 }
 
