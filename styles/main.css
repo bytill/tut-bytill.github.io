@@ -57,7 +57,7 @@ border-radius: 10px; /* Rounded corners on the image */
 
 /* Effekt für Bilder beim Klicken */
 .minispiel-item img:active, .zweite-kachel:active, .erste-kachel:active {
-transform: scale(0.98); /* Verkleinert das Bild um 10% beim Klicken */
+transform: scale(-10px); /* Verkleinert das Bild um 10% beim Klicken */
 }
 
 .vorschlag-img {
