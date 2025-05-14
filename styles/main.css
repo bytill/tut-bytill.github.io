@@ -82,6 +82,19 @@ top: 16px;
 left: 16px;
 }
 
+.vorschlag-description {
+font-size: 14px;
+font-weight: normal;
+position: absolute;
+top: 52px;
+left: 16px;
+width: calc(100% - 32px); /* links + rechts 16px Abstand */
+line-height: 1.5;
+word-wrap: break-word;
+max-height: calc(100% - 52px - 16px); /* Platz nach oben + unten abziehen */
+overflow: hidden;
+}
+
 .titel-text {
 font-size: 20px;
 font-weight: bold;
