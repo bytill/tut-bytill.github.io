@@ -36,14 +36,14 @@ window.addEventListener('load', () => {
 }
 
 const miniGames = [
-{ id: 'tut-bombe', img_src: "/img/tut-bombe.png", name: 'Bombe', description: 'Die Bombe tickt! Wer das Handy in der Hand hält, wenn sie explodiert, hat Pech – und muss trinken! ⏳💣', count: 0 },
-{ id: 'tut-reflex', img_src: "/img/tut-reflex.png", name: 'Reflex', description: 'Hier zählt jede Millisekunde! Wer am schnellsten reagiert, bleibt verschont – die Langsamsten müssen trinken! ⚡🥤', count: 0 },
-{ id: 'tut-speed', img_src: "/img/tut-speed.png", name: 'Speed', description: 'Stopp die Zeit und finde heraus, wie lange du für ein ganzes Glas brauchst. Wer trinkt am schnellsten? ⏱🍺', count: 0 },
-{ id: 'tut-timing', img_src: "/img/tut-timing.png", name: 'Timing', description: 'Exakt 7 Sekunden – nicht mehr, nicht weniger! Wer am genauesten trifft, bleibt trocken. Alle anderen müssen ran! 🎯🥂', count: 0 },
-{ id: 'tut-nhie', img_src: "/img/tut-nhie.png", name: 'Ich hab noch nie..', description: 'Wer es erlebt hat, trinkt. 🍻', count: 0 },
-{ id: 'tut-truefalse', img_src: "/img/tut-truefalse.png", name: 'True-False', description: 'Richtig oder Falsch? Glaubst du, die richtige Antwort zu kennen? Wenn nicht – Prost! ✅❌', count: 0 },
-{ id: 'tut-sagwas', img_src: "/img/tut-sagwas.png", name: 'Sag was..', description: 'Jeder nennt etwas aus einer Kategorie. Dir fällt nichts mehr ein? Pech gehabt – trinken! 🔄🍹', count: 0 },
-{ id: 'tut-schaetzmal', img_src: "/img/tut-schaetzmal.png", name: 'Schätz doch mal..', description: 'Schätzen statt Raten! Wer nah dran ist, kommt glimpflich davon. Wer danebenliegt, leert das Glas! 🎲🥤', count: 0 },
+{ id: 'tut-bombe', img_src: "/img/tut-bombe.webp", name: 'Bombe', description: 'Die Bombe tickt! Wer das Handy in der Hand hält, wenn sie explodiert, hat Pech – und muss trinken! ⏳💣', count: 0 },
+{ id: 'tut-reflex', img_src: "/img/tut-reflex.webp", name: 'Reflex', description: 'Hier zählt jede Millisekunde! Wer am schnellsten reagiert, bleibt verschont – die Langsamsten müssen trinken! ⚡🥤', count: 0 },
+{ id: 'tut-speed', img_src: "/img/tut-speed.webp", name: 'Speed', description: 'Stopp die Zeit und finde heraus, wie lange du für ein ganzes Glas brauchst. Wer trinkt am schnellsten? ⏱🍺', count: 0 },
+{ id: 'tut-timing', img_src: "/img/tut-timing.webp", name: 'Timing', description: 'Exakt 7 Sekunden – nicht mehr, nicht weniger! Wer am genauesten trifft, bleibt trocken. Alle anderen müssen ran! 🎯🥂', count: 0 },
+{ id: 'tut-nhie', img_src: "/img/tut-nhie.webp", name: 'Ich hab noch nie..', description: 'Wer es erlebt hat, trinkt. 🍻', count: 0 },
+{ id: 'tut-truefalse', img_src: "/img/tut-truefalse.webp", name: 'True-False', description: 'Richtig oder Falsch? Glaubst du, die richtige Antwort zu kennen? Wenn nicht – Prost! ✅❌', count: 0 },
+{ id: 'tut-sagwas', img_src: "/img/tut-sagwas.webp", name: 'Sag was..', description: 'Jeder nennt etwas aus einer Kategorie. Dir fällt nichts mehr ein? Pech gehabt – trinken! 🔄🍹', count: 0 },
+{ id: 'tut-schaetzmal', img_src: "/img/tut-schaetzmal.webp", name: 'Schätz doch mal..', description: 'Schätzen statt Raten! Wer nah dran ist, kommt glimpflich davon. Wer danebenliegt, leert das Glas! 🎲🥤', count: 0 },
 // weitere Spiele...
 ];
 
