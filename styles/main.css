@@ -6,9 +6,9 @@ box-sizing: border-box;
 
 :root {
 --app-height: 100vh;
---spacing-small: 8px;
---spacing-medium: 16px;
---spacing-large: 32px;
+--spacing-small: 10px;
+--spacing-medium: 20px;
+--spacing-large: 40px;
 }
 
 html, body {
