@@ -9,7 +9,7 @@ box-sizing: border-box;
 --spacing-small: 12px;
 --spacing-medium: 24px;
 --spacing-large: 48px;
---font-size-small: 10px;
+--font-size-small: 12px;
 --font-size-medium: 14px;
 --font-size-large: 18px
 }
@@ -87,7 +87,7 @@ object-fit: cover;
 font-size: var(--font-size-medium);
 font-weight: normal;
 position: absolute;
-top: calc(var(--spacing-small) / 2);
+top: var(--spacing-small);
 left: var(--spacing-medium);
 opacity: 0.75;
 }
@@ -97,13 +97,14 @@ opacity: 0.75;
 font-size: var(--font-size-small);
 font-weight: normal;
 position: absolute;
-top: calc(var(--spacing-small) + var(--font-size-medium));
+top: calc(var(--spacing-small) + var(--font-size-medium) + var(--spacing-small));
 left: var(--spacing-medium);
 width: calc(100% - var(--spacing-large)); /* links + rechts 16px Abstand */
 line-height: 1.5;
 word-wrap: break-word;
-max-height: calc(100% - var(--spacing-small) + var(--font-size-medium) - var(--spacing-small)); /* Platz nach oben + unten abziehen */
+max-height: calc(100% - var(--spacing-small) + var(--font-size-medium) + var(--spacing-small) - var(--spacing-small)); /* Platz nach oben + unten abziehen */
 overflow: hidden;
+text-overflow: ellipsis;
 }
 
 .titel-text {
