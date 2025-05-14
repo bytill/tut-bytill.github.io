@@ -10,9 +10,15 @@ if (workbox) {
     { url: '/scripts/sw.js', revision: '1.0.0' },
     { url: '/img/tut-icon_192.png', revision: '1' },
     { url: '/img/tut-icon_512.png', revision: '1' },
-    { url: '/img/tut-icon_splsh.png', revision: '1' },
-    { url: '/img/tut-bombe.png', revision: '1' },
-    { url: '/img/tut-milli.png', revision: '1' },
+    { url: '/img/tut-icon_splsh.webp', revision: '1' },
+    { url: '/img/tut-bombe.webp', revision: '1' },
+    { url: '/img/tut-nhie.webp', revision: '1' },
+    { url: '/img/tut-reflex.webp', revision: '1' },
+    { url: '/img/tut-sagwas.webp', revision: '1' },
+    { url: '/img/tut-schaetzmal.webp', revision: '1' },
+    { url: '/img/tut-speed.webp', revision: '1' },
+    { url: '/img/tut-timing.webp', revision: '1' },
+    { url: '/img/tut-truefalse.webp', revision: '1' },
   ]);
 
   // Cache HTML files (NetworkFirst or CacheFirst)
