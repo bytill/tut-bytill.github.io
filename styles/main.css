@@ -43,7 +43,7 @@ height: calc(20% - 16px);
 }
 
 .zweite-kachel, .dritte-kachel{
-height: calc(40% - 16px);
+height: calc(40% - 8px);
 }
 
 .zweite-kachel, .minispiel-item img{
@@ -77,8 +77,8 @@ object-fit: cover;
 font-size: 16px;
 font-weight: bold;
 position: absolute;
-top: 8px;
-left: 8px;
+top: 0px;
+left: 0px;
 }
 
 .titel-text {
