@@ -42,7 +42,7 @@ const miniGames = [
 { id: 'tut-timing', img_src: "/img/tut-timing.png", name: 'Timing', description: 'Exakt 7 Sekunden – nicht mehr, nicht weniger! Wer am genauesten trifft, bleibt trocken. Alle anderen müssen ran! 🎯🥂', count: 0 },
 { id: 'tut-nhie', img_src: "/img/tut-nhie.png", name: 'Ich hab noch nie..', description: 'Wer es erlebt hat, trinkt. 🍻', count: 0 },
 { id: 'tut-truefalse', img_src: "/img/tut-truefalse.png", name: 'True-False', description: 'Richtig oder Falsch? Glaubst du, die richtige Antwort zu kennen? Wenn nicht – Prost! ✅❌', count: 0 },
-{ id: 'tut-sagmal', img_src: "/img/tut-sagmal.png", name: 'Sag mal..', description: 'Jeder nennt etwas aus einer Kategorie. Dir fällt nichts mehr ein? Pech gehabt – trinken! 🔄🍹', count: 0 },
+{ id: 'tut-sagwas', img_src: "/img/tut-sagwas.png", name: 'Sag was..', description: 'Jeder nennt etwas aus einer Kategorie. Dir fällt nichts mehr ein? Pech gehabt – trinken! 🔄🍹', count: 0 },
 { id: 'tut-schaetzmal', img_src: "/img/tut-schaetzmal.png", name: 'Schätz doch mal..', description: 'Schätzen statt Raten! Wer nah dran ist, kommt glimpflich davon. Wer danebenliegt, leert das Glas! 🎲🥤', count: 0 },
 // weitere Spiele...
 ];
