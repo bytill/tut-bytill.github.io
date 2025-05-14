@@ -76,9 +76,9 @@ object-fit: cover;
 .vorschlag-text {
 font-size: 16px;
 font-weight: bold;
-position: relative;
+position: absolut;
 top: 8px;
-left: 8px;
+left: 16px;
 }
 
 .titel-text {
@@ -97,6 +97,7 @@ transform: translateY(8px);
 
 .minispiele-scroll {
 margin-top: 8px;
+margin-left: 15px;
 display: flex;
 align-items: flex-start;
 justify-content: flex-start;
