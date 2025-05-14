@@ -6,6 +6,9 @@ box-sizing: border-box;
 
 :root {
 --app-height: 100vh;
+--spacing-small: 8px;
+--spacing-medium: 16px;
+--spacing-large: 32px;
 }
 
 html, body {
@@ -19,18 +22,17 @@ overscroll-behavior: contain;
 .main-container {
 height: var(--app-height);
 padding:
-  calc(0px + env(safe-area-inset-top))
-  calc(16px + env(safe-area-inset-right))
-  calc(0px + env(safe-area-inset-bottom))
-  calc(16px + env(safe-area-inset-left));
+  env(safe-area-inset-top)
+  env(safe-area-inset-right)
+  env(safe-area-inset-bottom)
+  env(safe-area-inset-left);
 display: flex;
 flex-direction: column;
-gap: 16px;
+gap: var(--spacing-medium);
 }
   
 .kachel {
 background-color: #22222200;
-border-radius: 12px;
 overflow: hidden;
 width: 100%;
 position: relative;
@@ -40,14 +42,14 @@ align-items: center;
 }
 
 .erste-kachel {
-height: calc(20% - 16px);
+height: calc(20% - var(--spacing-medium));
 }
 
 .zweite-kachel, .dritte-kachel{
-height: calc(40% - 16px);
+height: calc(40% - var(--spacing-medium));
 }
 
-.zweite-kachel, .minispiel-item img{
+.zweite-kachel img, .minispiel-item img{
 border: 2.5px solid rgba(255, 255, 255, 0.35);
 }
 
@@ -61,62 +63,67 @@ transition: transform 0.2s ease;
 transform: scale(0.98); /* Verkleinert das Bild um 10% beim Klicken */
 }
 
+.vorschlag-img, .zweite-kachel img, .minispiel-item img{
+border-radius: var(--spacing-small);
+}
+
 .vorschlag-img {
 opacity: 0.5;
-width: 100%;
+width: calc(100% - var(--spacing-medium));
 height: 100%;
 object-fit: cover;
 }
 
 .zweite-kachel img {
-width: 100%;
+width: calc(100% - var(--spacing-medium));
 height: 100%;
 object-fit: cover;
 }
 
 .vorschlag-text {
 font-size: 16px;
-font-weight: bold;
+font-weight: normal;
 position: absolute;
-top: 16px;
-left: 16px;
-opacity: 0.8;
+top: var(--spacing-medium);
+left: var(--spacing-medium);
 }
 
 .vorschlag-description {
 font-size: 14px;
-font-weight: bold;
+font-weight: lighter;
 position: absolute;
-top: 42px;
-left: 16px;
-width: calc(100% - 32px); /* links + rechts 16px Abstand */
+top: calc(var(--spacing-large) + var(--spacing-small));
+left: var(--spacing-medium);
+width: calc(100% - var(--spacing-large)); /* links + rechts 16px Abstand */
 line-height: 1.5;
 word-wrap: break-word;
-max-height: calc(100% - 42px - 16px); /* Platz nach oben + unten abziehen */
+max-height: calc(100% - var(--spacing-large) + var(--spacing-small) - var(--spacing-medium)); /* Platz nach oben + unten abziehen */
 overflow: hidden;
-opacity: 0.8;
 }
 
 .titel-text {
 font-size: 20px;
+margin-left: var(--spacing-small);
 font-weight: bold;
 text-align: left;
-transform: translateY(8px);
+transform: translateY(var(--spacing-small));
 }
 
 .minispiele-titel {
 font-size: 16px;
-font-weight: light;
+margin-left: var(--spacing-small);
+font-weight: normal;
 text-align: left;
-transform: translateY(8px);
+transform: translateY(var(--spacing-small));
 }
 
 .minispiele-scroll {
-margin-top: 8px;
+margin-top: var(--spacing-small);
+margin-left: var(--spacing-small);
 display: flex;
 align-items: flex-start;
 justify-content: flex-start;
-gap: 16px;
+gap: var(--spacing-medium);
 overflow-x: auto;
 height: 100%;
 }
@@ -128,7 +135,6 @@ aspect-ratio: 2 / 3; /* Aspect ratio */
 display: flex;
 flex-direction: column;
 align-items: center;
-border-radius: 5%; /* Rounded corners on the container */
 overflow: hidden; /* Ensures content doesn't overflow */
 }
 
@@ -137,7 +143,6 @@ width: 100%;
 height: 75%; /* Image takes 80% of the height */
 object-fit: cover; /* Image fits the container without distortion */
 display: block; /* Ensures no gaps or inline behavior */
-border-radius: 5%; /* Rounded corners on the image */
 overflow: hidden; /* Ensures image is clipped properly */
 }
 
