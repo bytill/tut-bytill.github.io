@@ -87,12 +87,12 @@ opacity: 0.8;
 font-size: 14px;
 font-weight: bold;
 position: absolute;
-top: 52px;
+top: 42px;
 left: 16px;
 width: calc(100% - 32px); /* links + rechts 16px Abstand */
 line-height: 1.5;
 word-wrap: break-word;
-max-height: calc(100% - 52px - 16px); /* Platz nach oben + unten abziehen */
+max-height: calc(100% - 42px - 16px); /* Platz nach oben + unten abziehen */
 overflow: hidden;
 opacity: 0.8;
 }
