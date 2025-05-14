@@ -92,7 +92,7 @@ opacity: 0.75;
 .vorschlag-description {
 opacity: 0.75;
 font-size: 14px;
-font-weight: lighter;
+font-weight: normal;
 position: absolute;
 top: calc(var(--spacing-large) + var(--spacing-small));
 left: var(--spacing-medium);
@@ -114,7 +114,7 @@ transform: translateY(var(--spacing-small));
 .minispiele-titel {
 font-size: 16px;
 margin-left: var(--spacing-small);
-font-weight: normal;
+font-weight: bold;
 text-align: left;
 transform: translateY(var(--spacing-small));
 }
