@@ -52,7 +52,7 @@ border: 2.5px solid rgba(255, 255, 255, 0.35);
 
 .vorschlag-img, .zweite-kachel img, .minispiel-item img {
 transition: transform 0.2s ease;
-border-radius: 5%; /* Rounded corners on the image */
+border-radius: 10px; /* Rounded corners on the image */
 }
 
 /* Effekt für Bilder beim Klicken */
@@ -76,7 +76,7 @@ object-fit: cover;
 .vorschlag-text {
 font-size: 16px;
 font-weight: bold;
-position: absolute;
+position: relative;
 top: 8px;
 left: 8px;
 }
