@@ -1,0 +1,25 @@
+INTER FONT
+
+Die Schriftart „Inter“ wird unter der SIL Open Font License, Version 1.1 lizenziert.
+Weitere Informationen: https://fonts.google.com/specimen/Inter
+Lizenztext: https://scripts.sil.org/OFL
+
+SIL OPEN FONT LICENSE Version 1.1 – 26 February 2007
+Copyright (c) The Inter Project Authors (https://github.com/rsms/inter)
+
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+GOOGLE MATERIAL ICONS
+
+Die verwendeten Icons stammen aus der „Google Material Icons“-Bibliothek.
+Lizenziert unter der Apache License, Version 2.0.
+
+Copyright 2014 Google Inc.
+https://fonts.google.com/icons
+Lizenztext: https://www.apache.org/licenses/LICENSE-2.0
+
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+HINWEIS
+
+Die oben genannten Inhalte werden lokal eingebunden und dienen der DSGVO-konformen Nutzung ohne Verbindung zu Google-Servern.
